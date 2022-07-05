@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //indexof 는 값으로 요소 제거하기
+    //없으면 -1처리 한다.
+    const itemsB = ['사과' ,'배' ,'바나나']
+    const index = itemsB.indexOf('바나나')//대문자 써야한다.
+    console.log(index)
+    itemsB.splice(index,1)//?????????
+    console.log(itemsB)
+    console.log(itemsB.indexOf('바나나'))//바나나가 없으니까 -1이 출력
+
+  </script>
+
+
+</head>
+<body>
+  
+</body>
+</html>
