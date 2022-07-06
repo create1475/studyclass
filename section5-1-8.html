@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //가변적으로 늘어나면서 공간값을 할당받는다.
+    //for문에 of들어있으면 가변적이다라고 생각하자 ㅋㅋㅋㅋ
+    function min(...items){//items 한번 다른 단어로 바꿔보자
+      let output = items[0]
+      for(const item of items){
+        if(output>item){
+          output = item
+        }
+      }
+      return output
+    }
+
+console.log('min(52,273,32,103,275,24,57)')    
+console.log(`=${min(52,273,32,103,275,24,57)}`)
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+  
+</body>
+</html>

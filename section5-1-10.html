@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //Array.isArray()메소드 객체가 배열인지 확인하기 위해 쓴다.
+    //first는 0x10번지 들어가고 가변은 아무것도 안들어간다.
+    //자습시간에 인강보기
+    function min(first,...rests){
+      let output
+      let items
+    //구조가 일치하게끔 만들어 주는 구조가 array.isarray이다.
+    if(Array.isArray(first)){//배열이 아니지만 배열처럼 만들어 주려고 저걸 쓴다.
+      output = first[0]
+      items = first
+    }else if(typeof(first) === 'number'){
+      output = first
+      items = rests
+    }
+
+    for(const item of items){
+      if(output > item){
+        output = item
+      }
+    }
+    return output
+  }
+
+console.log(`min(배열) : ${min([52,273,32,103,275,24,57])}`)  
+console.log(`min(숫자,...): $min{min(52,273,32,103,275,24,57)}`)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
