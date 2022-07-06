@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //clearTimeout(타이머ID)---함수로 설정한 타이머 제거
+    //clearInterval(타이머ID)---함수로 설정한 타이머 제거
+
+    let id
+    let count = 0
+    id = setInterval(()=>{
+      console.log(`1초마다 실행됩니다.(${count})`)
+    },1 * 1000)
+
+    setTimeout(()=>{
+      console.log('타이머를 종료합니다.')
+      clearInterval(id)
+    },5 * 1000)
+
+
+
+
+
+
+  </script>
+
+
+</head>
+<body>
+  
+</body>
+</html>
