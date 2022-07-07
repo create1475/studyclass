@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //상수 선언후 객체 생성
+    //내가 객체를 선언하고 그안에서 내가 만든다.
+    const student = {}
+    student.이름 = '윤인성'//자기가 알아서 이름이라는 필드를 만들고 윤인성을 넣음
+    student.취미 = '악기'
+    student.장래희망 = '생명공학자'
+
+    console.log(JSON.stringify(student,null,2))//json객체를 string객체로 변환시켜줌
+
+
+    //json은 경량의 data 교환 형식이다.
+    //json은 특정언어에 종속되지않고 사용이유는 데이터를 전송할 때 최소한의 용량으로 전송하기 위함
+    //data를 받을땐 json형식이 좋다.
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
