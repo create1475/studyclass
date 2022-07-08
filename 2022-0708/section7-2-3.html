@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //별 초기 설정
+    document.addEventListener('DOMContentLoaded',()=>{
+      const star = document.querySelector('h1')
+      star.style.position = 'absolute'//style속성을 조작하여 position값을 설정
+
+      let[x,y] = [0,0]
+      const block = 20
+      const print =() =>{
+        star.style.left = `${x*block}px`
+        star.style.top = `${y*block}px`
+      }
+      print()
+      //별을 이동을 출력하는 기능
+      
+      const [left,up,right,down] = [37,38,39,40]
+      document.body.addEventListener('keydown',(event)=>{//keydown은 키보드가 눌릴떄 실행되는거
+        switch(event.keyCode){
+            case left:
+            x-=1
+            break
+            case up:
+            y-=1
+            break
+            case right:
+            x+=1
+            break
+            case down:
+            y+=1
+            break
+          
+        }
+        print()
+      })
+        //별을 이동하는 기능(방향키를 쉽게 사용할수 있게 변수를 사용해서 이름붙임 )
+
+
+
+    })
+
+
+
+  </script>
+</head>
+<body>
+  <h1>★★★★★★★★★</h1>
+</body>
+</html>

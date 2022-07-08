@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <script>
+      document.addEventListener('DOMContentLoaded',()=>{//객체를 생성
+        let counter = 0// counter 값을 초기값 0지정
+        let isConnect = false//isconnect겂울 초기값 false로 지정
+
+        const h1 = document.querySelector('h1')//h1태그를 불러온다
+        const p = document.querySelector('p')//p 태그를 불러온다.
+        const connectButton = document.querySelector('#connect')//아이디 connect를 connectButton에 연결
+        const disconnectBotton = document.querySelector('#disconnect')//아이디disconnect를 disconnectBotton에 연결
+
+        const listener = (event)=>{//이벤트가 발생하면 리스너에 저장
+
+          h1.textContent = `클릭횟수:${counter++}`//오캐??? 클릭을 하면 하면 카운트 ++ 해서 저장 h1컨텐츠에
+        }
+        connectButton.addEventListener('click',()=>{//
+          if(isConnect === false){//만약에 isconnect가 false라면
+            h1.addEventListener('click',listener)//h1클릭 리스너 생성
+            p.textContent='이벤트 연결상태 :연결'//
+            isConnect = true
+            
+          }
+        })
+        disconnectBotton.addEventListener('click',()=>{
+          if(isConnect === true){
+            h1.removeEventListener('click',listener)
+            p.textContent = '이벤트 연결 상태 : 해제'
+            h1.textContent = `클릭횟수:0`
+            counter = 0
+            isConnect=false
+
+          }
+        })
+
+
+      })
+
+
+
+
+
+
+    </script>
+  <style>
+
+    h1{
+      user-select: none;
+
+    }
+  </style>
+
+
+
+
+</head>
+<body>
+  
+  <h1>클릭횟수:0</h1>
+  <button id="connect">이벤트 연결</button>
+  <button id="disconnect">이벤트 제거</button>
+  <p>이벤트 연결 상태: 해제</p>
+
+</body>
+</html>
