@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      //문서 객체 읽어드리고 생성하기
+      const divA = document.querySelector('#first')//id속성이 first인 div태그를 선택
+      const divB = document.querySelector('#second')
+      const h1 = document.createElement('h1')//내부적으로 생성
+      h1.textContent = '이동하는 h1태그'
+
+      const tofirst =()=>{//익명함수이다.
+        divA.appendChild(h1)//h1을 divA에 추가
+        setTimeout(tosecond,1000)//1초뒤에 toSecond 함수를 실행
+      }
+      const tosecond = ()=>{
+        divB.appendChild(h1)//h1을 divB에 추가
+        setTimeout(tofirst,100000)//10초 뒤에tostrat 함수를 실행
+      }
+      tofirst()
+
+    })
+
+
+
+  </script>
+
+</head>
+<body>
+  <div id="first">
+    <h1>첫번째 div 태그 내부</h1>
+  </div>
+  <div id="second">
+    <h1>두번째 div태그 내부</h1>
+  </div>
+  
+</body>
+</html>
