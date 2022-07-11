@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+  function divide(a,b){
+    if(b===0){
+      throw '0으로는 나눌수 없습니다.'
+    }
+    return a/b
+  }
+
+  console.log(divide(10,2))
+  console.log(divide(10,0))
+  //divide는 함수 내부에는 0으로 나눌때 '0으로 나눌수 없습니다.' 오류를 발생하도록 작성
+  //예외 강제로 발생시키고 잡기
+</script>
+</head>
+<body>
+  
+</body>
+</html>
