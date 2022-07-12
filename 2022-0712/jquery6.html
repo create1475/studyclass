@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      var n = 0
+      $(document).ready(function(){
+        $("div.out").mouseenter(function(){
+          $("p:first",this).text("들들들들들");
+          $("p:last",this).text(++n);
+        });
+        $("div.out").mouseleave(function(){
+          $("p:first",this).text("나감나감나감");
+          $("p:last",this).text("최종 횟수 : " + n);
+
+        });
+      });
+    </script>
+    <style>
+      div.out{
+        width: 300px;
+        height: 50px;
+        border: 1px solid #000000;
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      <p>마우스 이벤트 알아보기</p>
+      <p>0</p>
+    </div>
+  </body>
+</html>

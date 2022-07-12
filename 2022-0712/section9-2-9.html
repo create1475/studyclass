@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //정사각형 클래스
+    class Square {
+      #length
+
+      constructor(length) {
+        this.setLength(length)
+      }
+      //함수를 사용하므로 내부에서 예외 처리 등을 할수 있음
+      setLength(value) {
+        if (value <= 0) {
+          throw '길이가 0보다 커야 합니다.'
+        }
+        this.#length = value
+      }
+      getLength(value) {
+        return this.#length
+      }
+      getPerimeter() { return 4 * this.#length }
+      getArea() { return this.#length * this.#length }
+    }
+    //클래스 사용하기
+    const square = new Square(10)
+    console.log(`한변의 길이는 ${square.getLength()}`)
+    //예외 발생 시키기
+    square.setLength(-10)
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
