@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>이미지 슬라이더</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var width = 460;
+        var height = 300;
+        var current =0;
+
+        var moveTo = function (){
+          $('.images').animate({
+            left:-current * width
+          },1000);
+        };
+      
+      var imageLength = $('.slider').find('.image').length;
+
+      for(let i = 0; i < imageLength; i++){
+        $('<button></button>')
+        .attr('data-position',i)
+        .text(i)
+        .click(function (){
+          current = $(this).attr('data-position');
+          moveTo();
+        })
+        .insertBefore('.slider');
+      }
+      $('.slider').css({
+        position: 'relative',
+        width: width,
+        height:height,
+        overflow:'hidden'
+      });
+      $('.images').css({
+        position:'absolute',
+        width: width * imageLength,
+      });
+      $('.image').css({
+        margin:0,
+        padding:0,
+        width:width,
+        height:height,
+        display:'block',
+        float:'left'
+        
+      });
+      setInterval(function (){
+        current = current + 1;
+        current = current % imageLength;
+        moveTo();
+
+      },3000)
+    });
+    </script>
+
+   
+  </head>
+  <body>
+      <div class="slider">
+        <div class="images">
+          <img class="image" src="C:/web/02/image/ani.jpg" width="300px" height="300px"/>
+          <img class="image" src="C:/web/02/image/blue.jpg" width="300px" height="300px"/>
+          <img class="image" src="C:/web/02/image/dog.jpg" width="300px" height="300px"/>
+          <img class="image" src="C:/web/02/image/sky.jpg" width="300px" height="300px"/>
+          <div class="image">
+            <h1>이미지가 아닌 것</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores aperiam nemo molestiae corrupti reprehenderit earum saepe possimus eveniet numquam veritatis officia, impedit sed sequi ex magni enim vero cum placeat!</p>
+            
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>

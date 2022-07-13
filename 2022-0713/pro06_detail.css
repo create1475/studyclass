@@ -1,0 +1,30 @@
+/*왼쪽 콘텐츠*/
+aside#left{
+  width: 215px;
+  float: left;
+  margin-top: 15px;
+  font-weight: bold;
+}
+aside#left #cat_title{
+  padding: 12px;
+  background-color: #96c11f;
+  color: #ffffff;
+  text-align: center;
+}
+aside#left li{
+  color: #666666;
+  padding: 7px 0 7px 30px;
+  border-left: solid 1px #cccccc;
+  border-right: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc;
+}
+aside#left #customer{
+  width: 213px;
+  height: 100px;
+  margin-top: 20px;
+  border: solid 1px #cccccc;
+  background-color: #ffffff;
+}
+aside#left #customer img{
+  margin: 5px 0 0 5px;
+}

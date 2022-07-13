@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#hide").click(function(){
+          $("img").hide("slow");
+        });
+        $("#show").click(function(){
+          $("img").show("fast");
+        });
+        $("#toggle").click(function(){
+          $("img").toggle(3000);
+        });
+        $("#fadeTo").click(function(){
+          $("img").fadeTo("slow",0.5);
+        });
+      });
+    </script>
+  </head>
+  <button id="hide">hide</button>
+  <button id="show">show</button>
+  <button id="toggle">toggle</button>
+  <button id="fadeTo">fadeTo</button>
+  <p></p>
+  <img name="pic1" src="C:/web/02/image/ani.jpg"/>
+  <!--id 태그는 한번만 사용가능합니다
+  class태그는 중복사용 가능하다. 클래스명을 여러 곳에 사용해도 무방하다.
+하지만 id태그는 중복 사용 불가 -->
+</html>

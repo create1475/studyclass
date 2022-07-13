@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      //animate()메소드 -- 크기 및 위치변경 메소드 
+      $(document).click(function(){//문서가 실행되면 함수를 실행할께요
+        $("button.b1").click(function(){//버튼 1을 누르면
+          $("b1").toggleClass("red")
+          $("img").animate({//이미지를
+            width: '100px'//100px로 바꿔주세요
+
+            
+            
+          });
+          $("button").addClass("red")
+          
+        });
+        $("button.b2").click(function(){
+          $("b2").toggleClass("blue")
+          $("img").animate({
+            width: '200px'
+          })
+          $("button.b2").addClass("blue")
+        })
+        $("button.b3").click(function(){
+          $("b3").toggleClass("yellow")
+          $("img").animate({
+            width:'300px'
+          })
+        })
+      })
+    </script>
+    <style>
+      .css_pic{
+        height: 430px;
+        text-align: center;
+        font-size: xx-large;
+        font-style: bold;
+        
+      }
+      .css_pic img{
+        width: 250px;
+      }
+      .red{
+        color:red;
+      }
+      .blue{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="css_pic">
+        <p>버튼을 누르면 그림의 크기가 바뀝니다.</p>
+        <button class="b1">가로 100픽셀</button>
+        <button class="b2">가로 200픽셀</button>
+        <button class="b3">가로 300픽셀</button>
+        <img name="pic1" src="C:/web/02/image/ani.jpg">
+      </div>
+
+  </body>
+</html>
